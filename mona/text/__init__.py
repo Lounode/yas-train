@@ -1,9 +1,11 @@
 from .artifact_name import artifact_name
 from .stat import stat_name
 from .characters import characters_name
+from .item import itemsName
 
 
 lexicon = set({})
+
 for name in artifact_name:
     for char in name:
         lexicon.add(char)
@@ -16,10 +18,16 @@ for name in characters_name:
     for char in name:
         lexicon.add(char)
 
+for name in itemsName:
+    for char in name:
+        lexicon.add(char)
+
+
 numbers = " '0123456789.+%,/已装备圣遗物"
 # numbers = "'0123456789.+% abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 for char in numbers:
     lexicon.add(char)
+
 lexicon = sorted(list(lexicon))
 
 index_to_word = {

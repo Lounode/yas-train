@@ -8,7 +8,7 @@ from mona.text.stat import random_sub_stat, random_main_stat_name, random_main_s
 from mona.text.characters import random_equip
 from mona.config import config
 from mona.datagen.pre_process import pre_process
-
+from mona.text.item import randomItemName
 
 fonts = [ImageFont.truetype("./assets/genshin.ttf", i) for i in range(15, 40)]
 
@@ -27,10 +27,9 @@ def random_artifact_count():
     return temp
 
 
-random_funcs = [random_artifact_name, random_main_stat_name, random_main_stat_value,
-                random_sub_stat, random_level, random_equip, random_artifact_count]
-random_weights = [0.1, 0.05, 0.15,
-                  0.64, 0.02, 0.02, 0.02]
+random_funcs = [randomItemName]
+#random_weights = [0.1, 0.05, 0.15,
+#                  0.64, 0.02, 0.02, 0.02]
 
 
 def rand_color_1():
@@ -62,7 +61,7 @@ def rand_color_2():
 def random_text():
     func = random.choices(
         population=random_funcs,
-        weights=random_weights,
+        #weights=random_weights,
         k=1
     )
     return func[0]()
