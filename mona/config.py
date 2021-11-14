@@ -6,8 +6,8 @@ config = {
     "print_per": 100,
     "save_per": 300,
 
-    "train_size": 2000,
-    "validate_size": 1000,
+    "train_size": 20000,
+    "validate_size": 10000,
 
     "pretrain": False,
     "pretrain_name": "chs_all.pt",

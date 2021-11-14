@@ -9,6 +9,7 @@ from mona.text.characters import random_equip
 from mona.config import config
 from mona.datagen.pre_process import pre_process
 from mona.text.item import randomItemName
+from mona.text.number import randomNumber
 
 fonts = [ImageFont.truetype("./assets/genshin.ttf", i) for i in range(15, 40)]
 
@@ -27,7 +28,7 @@ def random_artifact_count():
     return temp
 
 
-random_funcs = [randomItemName]
+random_funcs = [randomNumber]
 #random_weights = [0.1, 0.05, 0.15,
 #                  0.64, 0.02, 0.02, 0.02]
 
